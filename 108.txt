@@ -1,0 +1,43 @@
+##108.N Queen Problem.
+##
+##source code:
+##class NQueens:
+##    def __init__(self, N):
+##        self.N = N
+##        self.board = [[0] * N for i in range(N)]
+##
+##    def print_board(self):
+##        for row in self.board:
+##            print(row)
+##
+##    def is_safe(self, row, col):
+##        # Check if there is any queen in the same row
+##        for i in range(col):
+##            if self.board[row][i] == 1:
+##                return False
+##
+##        # Check if there is any queen in the upper left diagonal
+##        i = row
+##        j = col
+##        while i >= 0 and j >= 0:
+##            if self.board[i][j] == 1:
+##                return False
+##            i -= 1
+##            j -= 1
+##
+##        # Check if there is any queen in the lower left diagonal
+##        i = row
+##        j = col
+##        while j >= 0 and i < self.N:
+##            if self.board[i][j] == 1:
+##                return False
+##            i += 1
+##            j -= 1
+##
+##        # If there is no conflict, then the position is safe
+##        return True
+##
+##    def solve(self, col):
+##        # If all queens are placed, return True
+##        if col >= self.N:
+##            return True

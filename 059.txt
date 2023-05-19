@@ -1,0 +1,5 @@
+##59. Define a custom exception class which takes a string message as attribute.
+##source code:
+##class CustomException(Exception):
+##    def __init__(self, message):
+##        self.message = message
